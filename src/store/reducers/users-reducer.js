@@ -1,4 +1,4 @@
-import { SET_USERS } from "../actions/users-action";
+import { DELETE_USER, SET_USERS } from "../actions/users-action";
 
 const initialState = {
   isLoading: false,
@@ -18,6 +18,11 @@ export const usersReducer = (state = initialState, action) => {
         totalPage: action.totalPage,
         currentPage: action.page,
         offset: action.offset,
+      };
+    case DELETE_USER:
+      return {
+        ...state,
+        users: state.users.filter((user) => user.id !== action.id),
       };
     default:
       return state;

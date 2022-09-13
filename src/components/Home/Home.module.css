@@ -1,6 +1,8 @@
-.Home{
+.Home {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  align-items: center;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 20px;
 }
