@@ -10,3 +10,6 @@ export const limitSelector = (state) => {
 export const totalPageSelector = (state) => {
   return state.users.totalPage;
 };
+export const isLoadingSelector = (state) => {
+  return state.users.isLoading;
+};

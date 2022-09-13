@@ -18,7 +18,7 @@ export const Paginator = () => {
   return (
     <div >
       <Stack spacing={2}>
-        <Pagination count={totalPage/limit} shape="rounded" color="primary" page={page} onChange={changePage} />
+        <Pagination count={totalPage / limit} shape="rounded" color="primary" page={page} onChange={changePage} />
       </Stack>
     </div>
   );

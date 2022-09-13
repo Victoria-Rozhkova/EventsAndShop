@@ -1,4 +1,8 @@
-import { DELETE_USER, SET_USERS } from "../actions/users-action";
+import {
+  DELETE_USER,
+  SET_USERS,
+  TOGGLE_IS_LOADING,
+} from "../actions/users-action";
 
 const initialState = {
   isLoading: false,
@@ -23,6 +27,11 @@ export const usersReducer = (state = initialState, action) => {
       return {
         ...state,
         users: state.users.filter((user) => user.id !== action.id),
+      };
+    case TOGGLE_IS_LOADING:
+      return {
+        ...state,
+        isLoading: action.isLoading,
       };
     default:
       return state;
