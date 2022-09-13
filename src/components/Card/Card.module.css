@@ -1,0 +1,38 @@
+.Card img {
+  max-width: 200px;
+}
+
+.Card__imgBlock {
+  position: relative;
+}
+
+.Card__imgBlock:hover .Card__imgBlock_hover {
+  display: block;
+}
+
+.Card__imgBlock_percent {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  background: #ffffffa6;
+  border-radius: 7px;
+  padding: 0 2px;
+  color: purple;
+  font-weight: 600;
+}
+
+.Card__imgBlock_hover {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  display: none;
+}
+
+.Card__imgBlock_modal {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #ffffffa6;
+
+}

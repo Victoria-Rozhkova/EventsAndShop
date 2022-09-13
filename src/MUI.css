@@ -1,8 +1,13 @@
 .MuiInputBase-root input {
   background: white;
   border-radius: 5px;
-  
+
 }
-.MuiFormControl-root{
+
+.MuiFormControl-root {
   width: 50%;
+}
+
+.MuiSvgIcon-root path {
+  fill: purple
 }

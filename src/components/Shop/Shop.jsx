@@ -1,10 +1,12 @@
 import React from "react";
-import style from "./Shop.module.css"
+import { Card } from "../Card/Card";
+import style from "./Shop.module.css";
 
-export const Shop = () =>{
+export const Shop = () => {
   return (
     <div className={style.Shop}>
       <h2>Магазин</h2>
+      <Card />
     </div>
-  )
-}
+  );
+};
