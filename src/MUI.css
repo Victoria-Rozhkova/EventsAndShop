@@ -1,0 +1,8 @@
+.MuiInputBase-root input {
+  background: white;
+  border-radius: 5px;
+  
+}
+.MuiFormControl-root{
+  width: 50%;
+}

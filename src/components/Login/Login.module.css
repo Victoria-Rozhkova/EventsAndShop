@@ -1,0 +1,15 @@
+.Login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  gap: 20px;
+  height: 100vh;
+  background: rgb(46, 43, 56);
+}
+
+.Login h2 {
+  color: white;
+}
