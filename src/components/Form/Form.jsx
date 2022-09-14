@@ -25,7 +25,7 @@ const Form = () => {
         errors.password = 'Пароль должен содержать хотя бы одну заглавную букву';
       }
       if (
-        !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[\w]{2,}$/g.test(values.email)
+        !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[\w\s]{2,}$/g.test(values.email)
       ) {
         errors.email = 'Некорректный адрес электронной почты';
       }
@@ -33,6 +33,8 @@ const Form = () => {
     }}
     onSubmit={(values, { setSubmitting }) => {
       dispatch(toggleIsLoading(true));
+      values.email.trim();
+      values.password.trim();
       setTimeout(() => {
         setSubmitting(false);
         dispatch(toggleIsLoading(false));
@@ -57,7 +59,7 @@ const Form = () => {
           name="email" placeholder="email"
           onChange={handleChange}
           onBlur={handleBlur}
-          value={values.email}
+          value={values.email.trim()}
         />
         {errors.email && touched.email && <span className={style.error}>{errors.email}</span>}
         <TextField

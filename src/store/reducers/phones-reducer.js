@@ -1,3 +1,7 @@
+import phone1 from "../../assets/images/phone-1.jpg";
+import phone2 from "../../assets/images/phone-2.jpg";
+import phone3 from "../../assets/images/phone-3.jpg";
+
 const initialState = {
   phones: [
     {
@@ -8,7 +12,7 @@ const initialState = {
       screen_resolution: "2340x1080",
       matrix: "OLED",
       memory: "256 ГБ",
-      img: "https://technolove.ru/upload/iblock/c30/9e3/orig.jpg",
+      img: phone1,
       rating: 5,
       rating_count: 775,
       discount: "17%",
@@ -25,7 +29,7 @@ const initialState = {
       screen_resolution: "2532x1170",
       matrix: "OLED",
       memory: "256 ГБ",
-      img: "https://cdek.shopping/storage/products/smartfon-apple-iphone-13-pro-128gb-grafitovyi/iphone-13-pro-128gb-graphite-3.jpg",
+      img: phone2,
       rating: 4,
       rating_count: 601,
       discount: "38%",
@@ -42,7 +46,7 @@ const initialState = {
       screen_resolution: "2340x1080",
       matrix: "OLED",
       memory: "256 ГБ",
-      img: "https://i-smart.by/image/iphone13/orig.jpg",
+      img: phone3,
       rating: 3,
       rating_count: 546,
       discount: "16%",

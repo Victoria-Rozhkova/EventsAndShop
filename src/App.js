@@ -14,7 +14,6 @@ function App() {
           <NavLink to="/shop">Магазин</NavLink>
         </div>
       </header>
-
       <Routes>
         <Route
           path="/"
