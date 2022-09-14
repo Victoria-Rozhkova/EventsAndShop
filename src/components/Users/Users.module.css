@@ -1,8 +1,0 @@
-.Users {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  min-width: 650px;
-}
