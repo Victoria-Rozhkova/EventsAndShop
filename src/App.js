@@ -8,14 +8,31 @@ function App() {
   return (
     <div className="App">
       <header className="App__header">
-        <NavLink to="/">Главная страница</NavLink>
-        <NavLink to="/login">Авторизация</NavLink>
-        <NavLink to="/shop">Магазин</NavLink>
+        <div className="App__wrap">
+          <NavLink to="/">Главная страница</NavLink>
+          <NavLink to="/login">Авторизация</NavLink>
+          <NavLink to="/shop">Магазин</NavLink>
+        </div>
       </header>
+
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <div className="App__wrap">
+              <Home />
+            </div>
+          }
+        />
         <Route path="/login" element={<Login />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route
+          path="/shop"
+          element={
+            <div className="App__wrap">
+              <Shop />
+            </div>
+          }
+        />
       </Routes>
     </div>
   );

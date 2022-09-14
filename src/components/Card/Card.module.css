@@ -1,3 +1,7 @@
+.Card {
+  /* display: flex; */
+}
+
 .Card img {
   max-width: 200px;
 }

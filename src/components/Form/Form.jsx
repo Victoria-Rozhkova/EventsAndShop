@@ -4,9 +4,16 @@ import style from './Form.module.css';
 import { Button, TextField } from '@mui/material';
 import "../../MUI.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleIsLoading } from '../../store/actions/users-action';
+import { isLoadingSelector } from '../../store/selectors/users-selectors';
+import { Loader } from '../Loader/Loader';
 
 const Form = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isLoading = useSelector(state => isLoadingSelector(state));
+
   return <Formik
     initialValues={{ email: '', password: '' }}
     validate={values => {
@@ -25,8 +32,10 @@ const Form = () => {
       return errors;
     }}
     onSubmit={(values, { setSubmitting }) => {
+      dispatch(toggleIsLoading(true));
       setTimeout(() => {
         setSubmitting(false);
+        dispatch(toggleIsLoading(false));
         return navigate("/");
       }, 2000);
     }}
@@ -62,6 +71,7 @@ const Form = () => {
         />
         {errors.password && touched.password && <span className={style.error}>{errors.password}</span>}
         <Button variant="contained" type="submit" disabled={isSubmitting}>Авторизация</Button>
+        {isLoading && <Loader classname={"Loader_login"} />}
       </form>
     )}
   </Formik>;
