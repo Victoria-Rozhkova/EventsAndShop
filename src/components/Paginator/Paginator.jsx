@@ -1,6 +1,5 @@
-
-import { Pagination, Stack } from "@mui/material";
 import React from "react";
+import { Pagination, Stack } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { currentPageSelector, limitSelector, totalPageSelector } from "../../store/selectors/users-selectors";
 import { getUsers } from "../../store/thunks/users-thunks";

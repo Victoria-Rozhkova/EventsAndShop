@@ -3,3 +3,10 @@
   text-align: center;
   margin: 30px 0;
 }
+
+.Card {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
