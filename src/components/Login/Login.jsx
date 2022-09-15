@@ -55,7 +55,6 @@ export const Login = () => {
         }) => (
           <form className={style.form} onSubmit={handleSubmit}>
             <TextField
-              required
               id="outlined-required"
               type="text"
               name="email" placeholder="email"
